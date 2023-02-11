@@ -16,6 +16,19 @@ pip install git+https://github.com/RimoChan/modnet-entry.git
 
 安装时会从Google Drive下载预训练模型，所以要保证你的网络是好的。
 
+## 示例
+
+首先随便准备一张`test.png`，然后——
+
+```python
+from MODNet_entry import get_model, infer2
+
+model = get_model('modnet_photographic_portrait_matting.ckpt')
+infer2(model, 'test.png', 'alpha.png', 'new_image.png')
+```
+
+这样就抠好啦，输出就是`alpha.png`和`new_image.png`这两张图。
+
 
 ## 接口
 
