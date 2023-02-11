@@ -29,6 +29,7 @@ def get_model(ckpt_name: str) -> MODNet: ...
 
 - `ckpt_name`: 模型的名字。只有`modnet_photographic_portrait_matting.ckpt`/`modnet_webcam_portrait_matting.ckpt`两种可选。
 
+<hr/>
 
 ```python
 def infer(modnet: MODNet, im: np.ndarray[np.uint8], ref_size=1024) -> np.ndarray[np.float32]: ...
@@ -46,6 +47,7 @@ def infer(modnet: MODNet, im: np.ndarray[np.uint8], ref_size=1024) -> np.ndarray
 
 返回一个与原图相同大小的灰度float矩阵。
 
+<hr/>
 
 ```python
 def infer2(modnet: MODNet, img_path: str, out_alpha_path: str = '', out_img_path: str = ''): ...
